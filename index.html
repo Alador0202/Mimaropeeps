@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank you Mimaropa!</title>
-    <link rel="stylesheet" href="Special.css">
+    <link rel="stylesheet" href="special.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hidden {
+            display: none;
+        }
+        .button-container {
+            margin: 20px;
+            text-align: center;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <div class="slogan-grid">
-
+    <div class="slogan-grid" id="content">
         <div class="slogan-container">
             <h1 class="slogan">James</h1>
             <p class="subtitle">
@@ -20,7 +44,7 @@
             </p>
             <p class="subtitle">It's me, James Asuncion</p>
         </div>
-
+    
         <div class="slogan-container">
             <h1 class="slogan">Caleb</h1>
             <p class="subtitle">
@@ -31,13 +55,35 @@
 
         <div class="slogan-container">
             <h1 class="slogan">Precious</h1>
-            <p class="subtitle">
-                Maraming salamat po sa pagbibigay sa amin ng masaya at makabuluhang learning experience 
-                sa aming work immersion. Ten days is just too short! Ang dami naming natutunan at nabuong 
-                memories that will really help us in the future. Lubos po naming pinapahalagahan ang lahat 
-                ng aming natutunan at na-enjoy sa maikling panahong ito, at sobrang grateful po kami sa 
-                inyong effort at suporta. Thank you po!
-            </p>
+            <div class="slogan-container">
+                <h1 class="slogan">Precious</h1>
+                <p class="subtitle">
+                    Maraming salamat po sa pagbibigay sa amin ng masaya at makabuluhang learning experience sa aming work immersion. 
+                    Ten days is just too short! Ang dami naming natutunan at nabuong memories that will really help us in the future. 
+                    Lubos po naming pinapahalagahan ang lahat ng aming natutunan at na-enjoy sa maikling panahong ito, at sobrang grateful 
+                    po kami sa inyong effort at suporta.
+                </p>
+                
+                <p class="subtitle">
+                    <strong>Shoutout sa S&T Promo Unit</strong> — thank you so much po sa 10 days na kasama kayo! Salamat po sa mga feedback 
+                    sa edits ko at sa pagbuo ng articles.
+                </p>
+            
+                <ul class="subtitle">
+                    <li><strong>Ma'am Athena</strong> – Thank you po for your chill vibe and for trusting me to deliver my work. Your balance of patience and expectation helped me improve so much!</li>
+                    <li><strong>Ma’am JC</strong> – You were the first to reach out to me, and I appreciate how you always checked if I was okay. Thank you for the snacks and for being so genuine! Never change po, ma’am.</li>
+                    <li><strong>Sir Mark</strong> – Our morning “chika minutes” will always be memorable! Thank you for your guidance in writing and for being such a positive vibe. Mamimiss ko po kayo, Kuya Mark!</li>
+                    <li><strong>Sir Dave</strong> – Thank you for your clear and constructive feedback. Your broadcasting skills and voice are truly inspiring, idol!</li>
+                    <li><strong>Kuya Walog</strong> – Salamat po sa life advice and fun stories every morning! You and Kuya Mark gave me so many valuable lessons I’ll carry forward.</li>
+                </ul>
+            
+                <p class="subtitle">
+                    Hinding-hindi ko po makakalimutan ang masayang environment na naranasan ko kasama po kayo.
+                </p>
+            
+                <p class="subtitle"><strong>Love, Precious</strong></p>
+            </div>
+            
         </div>
 
         <div class="slogan-container">
@@ -119,11 +165,11 @@
                 <br>
                 I really enjoyed my Immersion at <strong>DOST-Mimaropa</strong>! Buhay na buhay po ang office dahil sa inyong lahat!
                 <br>
-                From <strong>Ma'am Sophia, Ma'am Abi, Ma'am Athena, Ma'am Cha, Ma'am Mendy, Sir Allan, Sir Ryan, Sir Wade, Sir Aaron, Sir Mark,</strong> to <strong>Sir Carl</strong> up to <strong>Kuya Wallog</strong>!!! (Yan lang po natatandaan ko, I'm not good with names po, basta narinig ko po lahat ng names dyan, hehehe.) But still, I will remember all of your vibes, and dadalhin until I find a workplace like yours.
+                From <strong>Ma'am Sophia, Ma'am Abi, Ma'am Athena, Ma'am Cha, Ma'am Mindi, Sir Allan, Sir Ryan, Sir Wade, Sir Aaron, Sir Mark,</strong> to <strong>Sir Carl</strong> up to <strong>Kuya Wallog</strong>!!! (Yan lang po natatandaan ko, I'm not good with names po, basta narinig ko po lahat ng names dyan, hehehe.) But still, I will remember all of your vibes, and dadalhin until I find a workplace like yours.
                 <br>
                 Thank you for making this year very special for me! Na-clutch nyo po yun, kala ko 2024 will be one of my worst, nabaliktad nyo po yun somehow, that's why I'm very happy!
                 <br>
-                <strong>Cheers to everyone!!</strong> Duncan, RD, at sa kamay ni Ma'am Mendy! <strong>HAHAHAHAHA!</strong>
+                <strong>Cheers to everyone!!</strong> Duncan, RD, at sa kamay ni Ma'am Mindi! <strong>HAHAHAHAHA!</strong>
                 <br><br>
                 <em>Lots of Love,</em>
                 <strong>Isidro, Arlvin Alador</strong><br>
@@ -131,5 +177,28 @@
         </div>
 
     </div>
+
+    <div class="image-container hidden" id="imageSection">
+        <img src="image.png" alt="Thank You Image">
+    </div>
+
+    <div class="button-container">
+        <button onclick="showImage()">Show Image</button>
+        <button class="hidden" id="backButton" onclick="showContent()">Go Back</button>
+    </div>
+
+    <script>
+        function showImage() {
+            document.getElementById('content').classList.add('hidden');
+            document.getElementById('imageSection').classList.remove('hidden');
+            document.getElementById('backButton').classList.remove('hidden');
+        }
+
+        function showContent() {
+            document.getElementById('content').classList.remove('hidden');
+            document.getElementById('imageSection').classList.add('hidden');
+            document.getElementById('backButton').classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
